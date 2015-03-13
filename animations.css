@@ -1,0 +1,30 @@
+*{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.translate div, .rotate div, .scale div, .skewX div, .skewY div{
+	width: 200px;
+	height: 200px;
+	display: inline-block;
+	margin-bottom: 1em;
+	text-align: center;
+	padding-top: 70px;
+	margin-right: 40px;
+	font-size: 150%;
+	font-family: Helvetica, Arial, sans-serif;
+}
+.translate div{
+	background-color: blue;
+	color: white;
+}
+.rotate div{
+	background-color: orange;
+}
+.scale div{
+	background-color: red;
+}
+.skewX div, .skewY div{
+	background-color: green;
+	color: white;
+}
