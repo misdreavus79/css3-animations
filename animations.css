@@ -3,7 +3,10 @@
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 }
-.translate div, .rotate div, .scale div, .skewX div, .skewY div{
+.container{
+	padding: 2em 4em;
+}
+#translate div, #rotate div, #scale div, #skewX div, #skewY div{
 	width: 200px;
 	height: 200px;
 	display: inline-block;
@@ -13,6 +16,7 @@
 	margin-right: 40px;
 	font-size: 150%;
 	font-family: Helvetica, Arial, sans-serif;
+	transition: all .5s;
 }
 .translate div{
 	background-color: blue;
@@ -27,4 +31,19 @@
 .skewX div, .skewY div{
 	background-color: green;
 	color: white;
+}
+.skewX{
+	transform: skewX(10deg);
+}
+.skewY{
+	transform: skewY(10deg);
+}
+.translate{
+	transform: translateX(20px);
+}
+.rotate{
+	transform: rotate(30deg);
+}
+.scale{
+	transform: scale(1.2, 1.2);
 }
