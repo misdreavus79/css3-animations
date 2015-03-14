@@ -5,45 +5,72 @@
 }
 .container{
 	padding: 2em 4em;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 150%;
 }
-#translate div, #rotate div, #scale div, #skewX div, #skewY div{
+h1{
+	position: relative;
+}
+h1 span{
+	background-color: lightblue;
+	padding: 5px;
+	border-radius: 3px;
+	font-size: 50%;
+	position: absolute;
+	top: 0;
+}
+h1 span:hover{
+	background-color: green;
+	color: white;
+}
+/*#translate, #rotate, #scale, #skewX, #skewY, #skewZ{
+	display: inline-block;
+}*/
+#translate div, #rotate div, #scale div, #skewX div, #skewY div, #skewZ div, #all2D div{
 	width: 200px;
 	height: 200px;
-	display: inline-block;
 	margin-bottom: 1em;
 	text-align: center;
 	padding-top: 70px;
 	margin-right: 40px;
-	font-size: 150%;
-	font-family: Helvetica, Arial, sans-serif;
 	transition: all .5s;
 }
-.translate div{
+#translate div{
 	background-color: blue;
 	color: white;
 }
-.rotate div{
+#rotate div{
 	background-color: orange;
 }
-.scale div{
+#scale div{
 	background-color: red;
 }
-.skewX div, .skewY div{
+#skewX div, #skewY div, #skewZ div{
 	background-color: green;
 	color: white;
 }
+#all2D div{
+	background-color: pink;
+}
 .skewX{
-	transform: skewX(10deg);
+	transform: skewX(30deg);
 }
 .skewY{
-	transform: skewY(10deg);
+	transform: skewY(30deg);
+}
+.skewZ{
+	transform: skewZ(30deg);
 }
 .translate{
-	transform: translateX(20px);
+	transform: translateX(60px);
 }
 .rotate{
 	transform: rotate(30deg);
 }
 .scale{
-	transform: scale(1.2, 1.2);
+	transform: scale(1.5, 1.5);
+}
+.all2D{
+	transform: skewX(30deg) skewY(30deg) translateX(120px) rotate(360deg) scale(1.5, 1.5);
+	background-color: limegreen;
 }
