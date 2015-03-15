@@ -23,10 +23,7 @@ h1 span:hover{
 	background-color: green;
 	color: white;
 }
-/*#translate, #rotate, #scale, #skewX, #skewY, #skewZ{
-	display: inline-block;
-}*/
-#translate div, #rotate div, #scale div, #skewX div, #skewY div, #skewZ div, #all2D div{
+#translate div, #rotate div, #scale div, #skewX div, #skewY div, #skewZ div, #all div{
 	width: 200px;
 	height: 200px;
 	margin-bottom: 1em;
@@ -34,6 +31,9 @@ h1 span:hover{
 	padding-top: 70px;
 	margin-right: 40px;
 	transition: all .5s;
+}
+.3d section{
+	transform: perspective(300px);
 }
 #translate div{
 	background-color: blue;
@@ -67,10 +67,13 @@ h1 span:hover{
 .rotate{
 	transform: rotate(30deg);
 }
+.3d .rotate{
+	transform: rotate3d(30deg, 30deg, 360deg);
+}
 .scale{
 	transform: scale(1.5, 1.5);
 }
 .all2D{
-	transform: skewX(30deg) skewY(30deg) translateX(120px) rotate(360deg) scale(1.5, 1.5);
+	transform: skewX(30deg) translateX(400px) rotate(360deg) scale(1.5, 1.5);
 	background-color: limegreen;
 }
