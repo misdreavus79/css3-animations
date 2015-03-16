@@ -1,0 +1,68 @@
+*{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.container{
+	padding: 2em 4em;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 150%;
+}
+h1{
+	position: relative;
+}
+h1 span{
+	background-color: lightblue;
+	padding: 5px;
+	border-radius: 3px;
+	font-size: 50%;
+	position: absolute;
+	top: 0;
+}
+h1 span:hover{
+	background-color: green;
+	color: white;
+}
+#translate div, #rotate div, #scale div, #skew div, #all div{
+	width: 200px;
+	height: 200px;
+	margin-bottom: 1em;
+	text-align: center;
+	padding-top: 70px;
+	margin-right: 40px;
+	transition: all 1s;
+	perspective: 600px;
+}
+#translate div{
+	background-color: blue;
+	color: white;
+}
+#rotate div{
+	background-color: orange;
+}
+#scale div{
+	background-color: red;
+}
+#skew div{
+	background-color: green;
+	color: white;
+}
+#all div{
+	background-color: pink;
+}
+.translate{
+	transform: translateX(60px) translateY(30px) translateZ(60px);
+}
+.rotate{
+	transform: rotateX(180deg) rotateY(180deg) rotateZ(90deg);
+}
+.scale{
+	transform: scaleX(1.5) scaleY(1.5) scaleZ(1.5);
+}
+.skew{
+	transform: skewX(30deg) skewY(30deg);
+}
+#all div.all{
+	transform: skewX(30deg) skewY(30deg) translateX(60px) translateY(30px) translateZ(60px) rotateX(180deg) rotateY(180deg) rotateZ(90deg) scaleX(1.2) scaleY(1.2) scaleZ(1.2);
+	background-color: limegreen;
+}

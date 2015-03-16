@@ -23,7 +23,7 @@ h1 span:hover{
 	background-color: green;
 	color: white;
 }
-#translate div, #rotate div, #scale div, #skewX div, #skewY div, #skewZ div, #all div{
+#translate div, #rotate div, #scale div, #skewX div, #skewY div, #all div{
 	width: 200px;
 	height: 200px;
 	margin-bottom: 1em;
@@ -31,9 +31,6 @@ h1 span:hover{
 	padding-top: 70px;
 	margin-right: 40px;
 	transition: all .5s;
-}
-.3d section{
-	transform: perspective(300px);
 }
 #translate div{
 	background-color: blue;
@@ -45,11 +42,11 @@ h1 span:hover{
 #scale div{
 	background-color: red;
 }
-#skewX div, #skewY div, #skewZ div{
+#skewX div, #skewY div{
 	background-color: green;
 	color: white;
 }
-#all2D div{
+#all div{
 	background-color: pink;
 }
 .skewX{
@@ -58,22 +55,69 @@ h1 span:hover{
 .skewY{
 	transform: skewY(30deg);
 }
-.skewZ{
-	transform: skewZ(30deg);
-}
 .translate{
 	transform: translateX(60px);
 }
 .rotate{
 	transform: rotate(30deg);
 }
-.3d .rotate{
-	transform: rotate3d(30deg, 30deg, 360deg);
-}
 .scale{
 	transform: scale(1.5, 1.5);
 }
-.all2D{
+.all{
 	transform: skewX(30deg) translateX(400px) rotate(360deg) scale(1.5, 1.5);
 	background-color: limegreen;
+}
+
+#fourcorners{
+	width: 200px;
+	height: 200px;
+	position: absolute;
+	background-color: green;
+	-moz-animation-name: corners;
+	-webkit-animation-name: corners;
+	-o-animation-name: corners;
+	animation-name: corners;
+	-moz-animation-direction: alternate;
+	-webkit-animation-direction: alternate;
+	-o-animation-direction: alternate;
+	animation-direction: alternate;
+	-moz-animation-duration: 2s;
+	-webkit-animation-duration: 2s;
+	-o-animation-duration: 2s;
+	animation-duration: 2s;
+	-moz-animation-iteration-count: infinite;
+	-webkit-animation-iteration-count: infinite;
+	-o-animation-iteration-count: infinite;
+	animation-iteration-count: infinite;
+}
+@-moz-keyframes corners{
+	from{
+		left: 0;
+		border-radius: 0;
+	}
+	to{
+		left: 95%;
+		border-radius: 50%;
+	}
+}
+@-webkit-keyframes corners{
+	from{
+		left: 0;
+		border-radius: 0;
+	}
+	to{
+		left: 95%;
+		border-radius: 50%;
+	}
+}
+@keyframes corners{
+	from{
+		left: 0;
+		border-radius: 0;
+	}
+	to{
+		left: 95%;
+		border-radius: 50%;
+	}
 }
