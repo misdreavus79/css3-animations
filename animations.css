@@ -1,123 +1,37 @@
-*{
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
+.animation {
+  position: relative;
+  min-height: 300px;
 }
-.container{
-	padding: 2em 4em;
-	font-family: Helvetica, Arial, sans-serif;
-	font-size: 150%;
+.animation div {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  animation-name: animation;
+  animation-duration: 2s;
+  animation-delay: 1s;
+  background-color: blue;
 }
-h1{
-	position: relative;
-}
-h1 span{
-	background-color: lightblue;
-	padding: 5px;
-	border-radius: 3px;
-	font-size: 50%;
-	position: absolute;
-	top: 0;
-}
-h1 span:hover{
-	background-color: green;
-	color: white;
-}
-#translate div, #rotate div, #scale div, #skewX div, #skewY div, #all div{
-	width: 200px;
-	height: 200px;
-	margin-bottom: 1em;
-	text-align: center;
-	padding-top: 70px;
-	margin-right: 40px;
-	transition: all .5s;
-}
-#translate div{
-	background-color: blue;
-	color: white;
-}
-#rotate div{
-	background-color: orange;
-}
-#scale div{
-	background-color: red;
-}
-#skewX div, #skewY div{
-	background-color: green;
-	color: white;
-}
-#all div{
-	background-color: pink;
-}
-.skewX{
-	transform: skewX(30deg);
-}
-.skewY{
-	transform: skewY(30deg);
-}
-.translate{
-	transform: translateX(60px);
-}
-.rotate{
-	transform: rotate(30deg);
-}
-.scale{
-	transform: scale(1.5, 1.5);
-}
-.all{
-	transform: skewX(30deg) translateX(400px) rotate(360deg) scale(1.5, 1.5);
-	background-color: limegreen;
+.infinite div {
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
 }
 
-#fourcorners{
-	width: 200px;
-	height: 200px;
-	position: absolute;
-	background-color: green;
-	-moz-animation-name: corners;
-	-webkit-animation-name: corners;
-	-o-animation-name: corners;
-	animation-name: corners;
-	-moz-animation-direction: alternate;
-	-webkit-animation-direction: alternate;
-	-o-animation-direction: alternate;
-	animation-direction: alternate;
-	-moz-animation-duration: 2s;
-	-webkit-animation-duration: 2s;
-	-o-animation-duration: 2s;
-	animation-duration: 2s;
-	-moz-animation-iteration-count: infinite;
-	-webkit-animation-iteration-count: infinite;
-	-o-animation-iteration-count: infinite;
-	animation-iteration-count: infinite;
+.finite div {
+  animation-direction: normal;
 }
-@-moz-keyframes corners{
-	from{
-		left: 0;
-		border-radius: 0;
-	}
-	to{
-		left: 95%;
-		border-radius: 50%;
-	}
+
+.sticky div {
+  animation-fill-mode: forwards;
 }
-@-webkit-keyframes corners{
-	from{
-		left: 0;
-		border-radius: 0;
-	}
-	to{
-		left: 95%;
-		border-radius: 50%;
-	}
-}
-@keyframes corners{
-	from{
-		left: 0;
-		border-radius: 0;
-	}
-	to{
-		left: 95%;
-		border-radius: 50%;
-	}
+
+@keyframes animation {
+  from {
+    left: 0;
+    border-radius: 0;
+  }
+  to {
+    left: calc(100% - 200px);
+    border-radius: 50%;
+    background-color: green;
+  }
 }
