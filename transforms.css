@@ -1,0 +1,46 @@
+.translate div,
+.rotate div,
+.scale div,
+.skew div,
+.all div {
+  width: 200px;
+  height: 200px;
+  margin-bottom: 1em;
+  text-align: center;
+  padding-top: 70px;
+  margin-right: 40px;
+  transition: all 0.5s;
+}
+.translate div {
+  background-color: blue;
+  color: white;
+}
+.rotate div {
+  background-color: orange;
+}
+.scale div {
+  background-color: red;
+}
+.skew div {
+  background-color: green;
+  color: white;
+}
+.all div {
+  background-color: pink;
+}
+.skew:hover div {
+  transform: skew(30deg 30deg);
+}
+.translate:hover div {
+  transform: translateX(60px);
+}
+.rotate:hover div {
+  transform: rotate(30deg);
+}
+.scale:hover div {
+  transform: scale(1.5, 1.5);
+}
+.all:hover div {
+  transform: skewX(30deg) translateX(400px) rotate(360deg) scale(1.5, 1.5);
+  background-color: limegreen;
+}
