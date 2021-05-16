@@ -1,8 +1,26 @@
+.translate,
+.rotate,
+.scale,
+.skew,
+.all,
+.translate3d,
+.rotate3d,
+.scale3d,
+.skew3d,
+.all3d {
+  max-width: 320px;
+}
+
 .translate div,
 .rotate div,
 .scale div,
 .skew div,
-.all div {
+.all div,
+.translate3d div,
+.rotate3d div,
+.scale3d div,
+.skew3d div,
+.all3d div {
   width: 200px;
   height: 200px;
   margin-bottom: 1em;
@@ -11,28 +29,41 @@
   margin-right: 40px;
   transition: all 0.5s;
 }
-.translate div {
+
+.translate3d div,
+.rotate3d div,
+.scale3d div,
+.skew3d div,
+.all3d div {
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+.translate div,
+.translate3d div {
   background-color: blue;
   color: white;
 }
-.rotate div {
+.rotate div,
+.rotate3d div {
   background-color: orange;
 }
-.scale div {
+.scale div,
+.scale3d div {
   background-color: red;
 }
-.skew div {
+.skew div,
+.skew3d div {
   background-color: green;
   color: white;
 }
-.all div {
+.all div,
+.all3d div {
   background-color: pink;
 }
 .skew:hover div {
-  transform: skew(30deg 30deg);
+  transform: skewX(30deg) skewY(30deg);
 }
 .translate:hover div {
-  transform: translateX(60px);
+  transform: translate(60px);
 }
 .rotate:hover div {
   transform: rotate(30deg);
@@ -42,5 +73,24 @@
 }
 .all:hover div {
   transform: skewX(30deg) translateX(400px) rotate(360deg) scale(1.5, 1.5);
+  background-color: limegreen;
+}
+
+.rotate3d:hover div {
+  transform: rotateX(180deg) rotateY(180deg) rotateZ(90deg);
+}
+.translate3d:hover div {
+  transform: translateX(60px) translateY(30px) translateZ(90px);
+}
+.scale3d:hover div {
+  transform: scaleX(1.5) scaleY(1.5) scaleZ(1.5);
+}
+.skew3d:hover div {
+  transform: skewX(30deg) skewY(30deg);
+}
+.all3d:hover div {
+  transform: skewX(30deg) skewY(30deg) translateX(60px) translateY(30px)
+    translateZ(60px) rotateX(180deg) rotateY(180deg) rotateZ(90deg) scaleX(1.2)
+    scaleY(1.2) scaleZ(1.2);
   background-color: limegreen;
 }

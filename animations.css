@@ -1,52 +1,37 @@
-#fourcorners{
-	width: 200px;
-	height: 200px;
-	position: absolute;
-	background-color: green;
-	-moz-animation-name: corners;
-	-webkit-animation-name: corners;
-	-o-animation-name: corners;
-	animation-name: corners;
-	-moz-animation-direction: alternate;
-	-webkit-animation-direction: alternate;
-	-o-animation-direction: alternate;
-	animation-direction: alternate;
-	-moz-animation-duration: 2s;
-	-webkit-animation-duration: 2s;
-	-o-animation-duration: 2s;
-	animation-duration: 2s;
-	-moz-animation-iteration-count: infinite;
-	-webkit-animation-iteration-count: infinite;
-	-o-animation-iteration-count: infinite;
-	animation-iteration-count: infinite;
+.animation {
+  position: relative;
+  min-height: 300px;
 }
-@-moz-keyframes corners{
-	from{
-		left: 0;
-		border-radius: 0;
-	}
-	to{
-		left: 95%;
-		border-radius: 50%;
-	}
+.animation div {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  animation-name: animation;
+  animation-duration: 2s;
+  animation-delay: 1s;
+  background-color: blue;
 }
-@-webkit-keyframes corners{
-	from{
-		left: 0;
-		border-radius: 0;
-	}
-	to{
-		left: 95%;
-		border-radius: 50%;
-	}
+.infinite div {
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
 }
-@keyframes corners{
-	from{
-		left: 0;
-		border-radius: 0;
-	}
-	to{
-		left: 95%;
-		border-radius: 50%;
-	}
+
+.finite div {
+  animation-direction: normal;
+}
+
+.sticky div {
+  animation-fill-mode: forwards;
+}
+
+@keyframes animation {
+  from {
+    left: 0;
+    border-radius: 0;
+  }
+  to {
+    left: calc(100% - 200px);
+    border-radius: 50%;
+    background-color: green;
+  }
 }
