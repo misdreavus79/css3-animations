@@ -13,6 +13,12 @@
   animation-play-state: paused;
 }
 
+@media screen and (prefers-reduced-motion) {
+  .full {
+    animation-duration: 4s;
+  }
+}
+
 .animation:hover div,
 .animation:focus div {
   animation-play-state: running;
