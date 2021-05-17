@@ -55,6 +55,12 @@
   position: absolute;
 }
 
+@media screen and (prefers-reduced-motion) {
+  .full {
+    animation-duration: 8s;
+  }
+}
+
 .one {
   left: 0;
   top: 0;
