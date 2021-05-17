@@ -7,8 +7,13 @@ body {
     font-family: Helvetica, Arial, sans-serif;
 }
 
+main {
+    position: relative;
+    padding: 2em 4em;
+    height: calc(100vh - 100px);
+}
+
 .container{
-	padding: 2em 4em;
 	font-size: 150%;
     display: flex;
     justify-content: space-around;

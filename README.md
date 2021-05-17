@@ -67,6 +67,14 @@ More complex, but more powerful transitions. These allow you to define an entire
 
 `@keyframes` - Properties at each point in the animation.
 
+And its shorthand:
+
+```
+animation: <name> <duration> <delay> <timing-function> <iteration-count> <direction> <fill-mode> <play-state>
+```
+
+*Note:* The order of the animation shorthand doesn't matter, with the exception of `animation-duration` and `animation-delay`, which need to be in that respective order.
+
 ### Example
 
 ```

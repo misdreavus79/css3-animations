@@ -1,0 +1,180 @@
+.animation {
+  position: relative;
+  min-height: 300px;
+}
+.animation div {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  animation-name: animation;
+  animation-duration: 2s;
+  animation-delay: 1s;
+  background-color: blue;
+  animation-play-state: paused;
+}
+
+.animation:hover div,
+.animation:focus div {
+  animation-play-state: running;
+}
+
+.infinite div {
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+
+.finite div {
+  animation-direction: normal;
+}
+
+.sticky div {
+  animation-fill-mode: forwards;
+}
+
+@keyframes animation {
+  from {
+    left: 0;
+    border-radius: 0;
+  }
+  to {
+    left: calc(100% - 200px);
+    border-radius: 50%;
+    background-color: green;
+  }
+}
+
+/* Full */
+
+.full {
+  width: 200px;
+  height: 200px;
+  animation-duration: 3s;
+  animation-delay: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  position: absolute;
+}
+
+.one {
+  left: 0;
+  top: 0;
+  animation-name: one, center;
+  background-color: green;
+}
+
+.two {
+  left: calc(100% - 200px);
+  top: 0;
+  animation-name: two, center;
+  background-color: purple;
+}
+
+.three {
+  left: calc(100% - 200px);
+  top: calc(100% - 200px);
+  animation-name: three, center;
+  background-color: green;
+}
+
+.four {
+  left: 0;
+  top: calc(100% - 200px);
+  animation-name: four, center;
+  background-color: purple;
+}
+
+@keyframes one {
+  20% {
+    left: calc(100% - 200px);
+    top: 0;
+  }
+  40% {
+    left: calc(100% - 200px);
+    top: calc(100% - 200px);
+  }
+  60% {
+    left: 0;
+    top: calc(100% - 200px);
+  }
+  80% {
+    left: 0;
+    top: 0;
+  }
+  100% {
+    left: calc(50% - 200px);
+    top: calc(50% - 200px); 
+    border-radius: 50%;
+  }
+}
+
+@keyframes two {
+  20% {
+    left: calc(100% - 200px);
+    top: calc(100% - 200px);
+  }
+  40% {
+    left: 0;
+    top: calc(100% - 200px);
+  }
+  60% {
+    left: 0;
+    top: 0;
+  }
+  80% {
+    left: calc(100% - 200px);
+    top: 0;
+  }
+  100% {
+    left: calc(50% - 200px);
+    top: calc(50% - 200px); 
+    border-radius: 50%;
+  }
+}
+
+@keyframes three {
+  20% {
+    left: 0;
+    top: calc(100% - 200px);
+  }
+  40% {
+    left: 0;
+    top: 0;
+  }
+  60% {
+    left: calc(100% - 200px);
+    top: 0;
+  }
+  80% {
+    left: calc(100% - 200px);
+    top: calc(100% - 200px);
+  }
+  100% {
+    left: calc(50% - 200px);
+    top: calc(50% - 200px); 
+    border-radius: 50%;
+  }
+}
+
+@keyframes four {
+  20% {
+    left: 0;
+    top: 0;
+  }
+  40% {
+    left: calc(100% - 200px);
+    top: 0;
+  }
+  60% {
+    left: calc(100% - 200px);
+    top: calc(100% - 200px);
+  }
+  80% {
+    left: 0;
+    top: calc(100% - 200px);
+  }
+  100% {
+    left: calc(50% - 200px);
+    top: calc(50% - 200px); 
+    border-radius: 50%;
+  }
+}
