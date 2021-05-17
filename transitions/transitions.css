@@ -30,6 +30,21 @@
   transition: all 0.5s;
 }
 
+@media screen and (prefers-reduced-motion) {
+  .translate div,
+  .rotate div,
+  .scale div,
+  .skew div,
+  .all div,
+  .translate3d div,
+  .rotate3d div,
+  .scale3d div,
+  .skew3d div,
+  .all3d div {
+    transition: all 1s;
+  }
+}
+
 .translate3d div,
 .rotate3d div,
 .scale3d div,
